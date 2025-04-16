@@ -49,9 +49,9 @@ local function LILMOQ_fake_script() -- TextButton.LocalScript
  
  local function updateButtonText()
   if nega then
-   toggleButton.Text = "Status:OFF"
+   toggleButton.Text = "Status : OFF"
   else
-   toggleButton.Text = "Status:ON"
+   toggleButton.Text = "Status : ON"
   end
  end
  
@@ -84,5 +84,4 @@ local function LILMOQ_fake_script() -- TextButton.LocalScript
  updateButtonText()
  
 end
-coroutine.wrap(LILMOQ_fake_script)()
-
+coroutine.wrap(LILMOQ_fake_script)(
