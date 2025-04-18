@@ -35,7 +35,7 @@ TextButton.BorderSizePixel = 0
 TextButton.Position = UDim2.new(0.175683141, 0, 0.408666462, 0)
 TextButton.Size = UDim2.new(0, 104, 0, 31)
 TextButton.Font = Enum.Font.SourceSansItalic
-TextButton.Text = "Status:OFF"
+TextButton.Text = "Status:Off"
 TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 15.000
 
@@ -49,9 +49,9 @@ local function LILMOQ_fake_script() -- TextButton.LocalScript
  
  local function updateButtonText()
   if nega then
-   toggleButton.Text = "Status : OFF"
+   toggleButton.Text = "Status:Off"
   else
-   toggleButton.Text = "Status : ON"
+   toggleButton.Text = "Status:On"
   end
  end
  
@@ -84,4 +84,4 @@ local function LILMOQ_fake_script() -- TextButton.LocalScript
  updateButtonText()
  
 end
-coroutine.wrap(LILMOQ_fake_script)(
+coroutine.wrap(LILMOQ_fake_script)()
