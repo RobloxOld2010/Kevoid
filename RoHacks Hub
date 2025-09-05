@@ -1,0 +1,319 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+
+Rayfield:Notify({
+   Title = "Notification",
+   Content = "Welcome To RoHacks Hub",
+   Duration = 6.5,
+   Image = 4483362458,
+})
+
+
+
+local Window = Rayfield:CreateWindow({
+   Name = "RoHacks Hub",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Loading...",
+   LoadingSubtitle = "By k00pder",
+   ShowText = "RoHacks Hub", -- for mobile users to unhide rayfield, change if you'd like
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+
+   ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
+
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+
+local Tab = Window:CreateTab("Player", 4483362458) -- Title, Image
+local Button = Tab:CreateButton({
+   Name = "R6 Animation (For R15)",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Icalock/Server/refs/heads/main/R6 anims.lua", true))()
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Sit",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-simple-sit-script-24165"))()
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Anti-Fling",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Anti-Collision-Anti-Fling-48978"))()
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Spin",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-simple-spinbot-45312"))()
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Walk On Wall",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxOld2010/Kevoid/refs/heads/main/Walk On Wall"))()
+   end,
+})
+
+
+local Tab = Window:CreateTab("Gui", 4483362458) -- Title, Image
+local Button = Tab:CreateButton({
+   Name = "Spin Gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Simple-spin-script-by-CHATGPT-29531"))()
+  end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Tool Giver(cilent)",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Tool-giver-29724"))()
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Tool Giver (Workspace)",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Tool-Giver-Workspace-Ui-27282"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Grow A Garden",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Grow-a-Garden-Xerox-Auto-Collect-And-More-39879"))()
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "c00lclan",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-C00lkid-47403"))()
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Dex Explorer",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Dex-Explorer-No-Key-29915"))()
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Lalol Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script"))()
+   end,
+})
+
+
+local Tab = Window:CreateTab("Gears", 4483362458) -- Title, Image
+
+
+local Button = Tab:CreateButton({
+   Name = "Force Field",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Forcefield-30169"))()
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Teleport Tool",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-TpTool-Teleport-Tool-47255"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Gravity Coil",
+   Callback = function()
+   _G.gravitycoil = game:GetObjects('rbxassetid://150366274')[1]
+_G.gravitycoil.Parent = game.Players.LocalPlayer.Backpack
+_G.gravitycoil.Equipped:Connect(function()
+game.workspace.Gravity = 50
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+local Sound = Instance.new("Sound") 
+local Id = "16619553"
+Sound.Parent = game.Workspace
+Sound.SoundId = "rbxassetid://"..Id
+Sound.Playing = true
+Sound.Looped = false
+Sound.Volume = 2
+end)
+_G.gravitycoil.Unequipped:Connect(function()
+game.workspace.Gravity = 196.2
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+   end,
+})
+
+
+local Button = Tab:CreateButton({
+   Name = "Speed Coil",
+   Callback = function()
+   _G.speedcoil = game:GetObjects('rbxassetid://99119158')[1]
+_G.speedcoil.Parent = game.Players.LocalPlayer.Backpack
+_G.speedcoil.Equipped:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+local Sound = Instance.new("Sound") 
+local Id = "99173388"
+Sound.Parent = game.Workspace
+Sound.SoundId = "rbxassetid://"..Id
+Sound.Playing = true
+Sound.Looped = false
+Sound.Volume = 5
+end)
+_G.speedcoil.Unequipped:Connect(function()
+game.Player .LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+   end, 
+})
+
+local Button = Tab:CreateButton({
+   Name = "Flashlight",
+   Callback = function()
+   
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Boombox",
+   Callback = function()
+   _G.boomboxb = game:GetObjects('rbxassetid://740618400')[1]
+_G.boomboxb.Parent = game:GetService'Players'.LocalPlayer.Backpack
+loadstring(_G.boomboxb.Client.Source)() 
+loadstring(_G.boomboxb.Server.Source)()
+   end,
+})
+
+local Tab = Window:CreateTab("Construction", 4483362458) -- Title, Image
+local Button = Tab:CreateButton({
+   Name = "Fullbright",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FullBright-Script-14383"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Spawn a ball",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Spawn-A-Ball-33757"))()
+   end,
+})
+
+local Tab = Window:CreateTab("Admin", 4483362458) -- Title, Image
+local Button = Tab:CreateButton({
+   Name = "Building Tools",
+   Callback = function()
+   --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Infinite Yield",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Infinite-Yield-43437"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Car Fly",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/RobloxOld2010/RobloxOld2010/refs/heads/main/Car%20Fly%20Script"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Ghost Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Ghost-Hub-27383"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Fly Gui V3",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-fly-gui-v3-46328"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Part orbit LKB Project",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/kokojoscripts/Lt-wave/refs/heads/main/ProjectXx"))()
+
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Fling All",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fling-All-Script-20486"))()
+   end,
+})
+
+local Tab = Window:CreateTab("Info", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Made By : @k00pder")
+local Section = Tab:CreateSection("Hub : Rayfield")
+local Section = Tab:CreateSection("Made On : 5/9/2025")
+local Section = Tab:CreateSection("Last Updated : 5/9/2025")
+
+
+
+
+
+
+
+
+
+
+
+
+
